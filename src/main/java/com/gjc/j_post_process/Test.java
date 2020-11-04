@@ -11,6 +11,8 @@ public class Test {
                 new AnnotationConfigApplicationContext("com.gjc.j_post_process");
         Person bean = applicationContext.getBean(Person.class);
         System.out.println(bean);
+
+        // 增加一行注释
     }
 
 
