@@ -10,9 +10,7 @@ public class SpringSpi {
     public static void main(String[] args) {
         List<String> list = SpringFactoriesLoader.loadFactoryNames(
                 DemoService.class, SpringSpi.class.getClassLoader());
-        list.forEach(className ->{
-            System.out.println(className);
-        });
+        list.forEach(System.out::println);
     }
 
 }
