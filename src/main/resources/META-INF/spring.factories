@@ -1,3 +1,8 @@
 com.gjc.k_spi.spring_spi.service.DemoService=\
   com.gjc.k_spi.spring_spi.service.impl.DemoOracleImpl,\
   com.gjc.k_spi.spring_spi.service.impl.DemoMySqlImpl
+
+java.sql.Driver=\
+  com.mysql.jdbc.Driver,\
+  oracle.jdbc.driver.OracleDriver,\
+  org.h2.Driver
