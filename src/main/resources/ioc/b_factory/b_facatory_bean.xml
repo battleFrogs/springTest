@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="car" class="com.gjc.ioc.b_factory.factory.StaticToyFactory" factory-method="getCar"></bean>-->
+
+    <bean id="factoryInstnce" class="com.gjc.ioc.b_factory.factory.FactoryInstance" ></bean>
+    <bean id="car2" factory-bean="factoryInstnce" factory-method="getCar"/>
+
+</beans>
