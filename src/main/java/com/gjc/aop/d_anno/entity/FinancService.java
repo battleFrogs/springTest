@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FinancService {
 
+    @Log
     public void addMoney(double money) {
         System.out.println("FinanceService 收钱 === " + money);
     }
@@ -18,6 +19,7 @@ public class FinancService {
         System.out.println("FinanceService 查询账户，id为" + id);
         return Math.random();
     }
+
 
 
 }
