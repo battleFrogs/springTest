@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="financeService" class="com.gjc.aop.c_xml_aspect.service.FinancService"/>
+
+    <bean id="orderService" class="com.gjc.aop.c_xml_aspect.service.impl.OrderServiceImpl"/>
+
+    <bean id="logger" class="com.gjc.aop.c_xml_aspect.service.Logger"/>
+
+    <aop:config>
+
+        <aop:aspect id="loggerAspect" ref="logger">
+
+            <aop:before method="beforePrint"
+                        pointcut="execution(public void com.gjc.aop.c_xml_aspect.service.FinancService.addMoney(double))"/>
+            <aop:after method="afterPrint"
+                        pointcut="execution(public void com.gjc.aop.c_xml_aspect.service.FinancService.*(double))"/>
+
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>
